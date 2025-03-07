@@ -6,3 +6,9 @@
 6. Monitoring --> Prometheus/Grafana, ELK
 7. Terraform --> Infrastructure Automation
 8. Ansible --> Configuration Management Tool
+
+
+Git, GitHub, GitHub actions, GitHub webhooks
+Jenkins, Sonarqube
+artifacts tool, Docker, K8s
+AWS code build, test, deploy, IAM roles, S3 buckets, Lambda functions, Vpc network, EKS.
