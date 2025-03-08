@@ -1,0 +1,356 @@
+ 1  apt update -y
+    2  clear
+    3  ls -l
+    4  pwd
+    5  clear
+    6  ls -la
+    7  mkdir project1
+    8  cd project1/
+    9  ls -la
+   10  git init
+   11  ls -la
+   12  touch file1
+   13  vi file1
+   14  git version
+   15  vi file1
+   16  cat file1
+   17  ls -l
+   18  git ls-files
+   19  git add file1
+   20  ls -l
+   21  git ls-files
+   22  git status
+   23  git commit -m "1st commit"
+   24  clear
+   25  ls -l
+   26  git ls-files
+   27  git status
+   28  history
+   29  cler
+   30  clear
+   31  git log
+   32  history
+
+
+40  touch file2
+   41  vi file2
+   42  cat file2
+   43  ls -l
+   44  git ls-files
+   45  git status
+   46  git add file2
+   47  git ls-files
+   48  git status
+   49  ls -l
+   50  git commit -m "2nd commit"
+   51  ls -l
+   52  git ls-files
+   53  git status
+   54  git log
+   55  git config --list
+   56  git config global --list
+   57  git config --list
+   58  git config --global user.name "raushan"
+   59  git config --list
+   60  git config --global user.email "raushan8586.kumar@gmail.com"
+   61  git config --list
+   62  vi file3
+   63  git add file3
+   64  git commit -m "3rd commit"
+   65  git log
+   67  ls -l
+   76  git config --list
+   77  git config --global user.email "raushan.kumar@gmail.com"
+   78  git config --list
+   79  ls -l
+   80  git status
+   81  git remote -v
+   82  clear
+   83  git remote -v
+   84  git remote add origin https://github.com/raushan8586/aug-2023-repo.git
+   85  git remote -v
+   86  git status
+   87  git push origin master
+   88  history
+
+git branch
+   90  git branch b1 master
+   91  git branch
+   92  git log --oneline
+   93  git log
+   94  clear
+   95  git log --oneline
+   96  git checkout b1
+   97  git branch
+   98  git log --oneline
+   99  vi b1_sample1
+  100  git status
+  101  git add .
+  102  git commit -m "b1_1st-commit"
+  103  git log --oneline
+  104  git checkout master
+  105  git log --oneline
+  106  ls -l
+  107  pwd
+  108  git checkout b1
+  109  ls -l
+  110  pwd
+  111  git branch
+  112  git checkout master
+  113  git merge b1 master
+  114  git log --oneline
+  115  git push origin b1
+  116  history
+
+
+Head is the pointer which points to the topmost commit.
+
+
+119  git branch
+  120  pwd
+  121  ls -l
+  122  cd project1/
+  123  ls -l
+  124  ls -la
+  125  git branch
+  126  git log --oneline
+  127  cd ..
+  128  ls -l
+  129  git clone https://github.com/raushan8586/intellipaat-repo2.git
+  130  ls -l
+  131  cd intellipaat-repo2/
+  132  ls - la
+  133  ls -la
+  134  ls -l
+  135  git ls-files
+  136  git status
+  137  cd ..
+  138  cd project1/
+  139  git log --oneline
+  140  ls -l
+  141  vi file4
+  142  ls -l
+  143  git status
+  144  git add .
+  145  git status
+  146  git ls-files
+  147  ls -l
+  148  git restore --staged file4
+  149  git status
+  150  git ls-files
+  151  git add .
+  152  git ls-files
+  153  git status
+  154  git commit -m "4th commit"
+  155  git ls-files
+  156  git log --oneline
+  157  git branch
+  158  git checkout b1
+  159  git branch
+  160  ls -l
+  161  vi b1_sample2
+  162  git add .
+  163  git commit -m "b1_2nd-commit"
+  164  git log --oneline
+  165  git branch
+  166  git log --oneline
+  167  git log --graph --pretty=oneline
+  168  git checkout master
+  169  git log --graph --pretty=oneline
+  170  git merge b1 master
+  171  git log --graph --pretty=oneline
+
+
+Rebase --> arrnaging the log history in the linear fashion
+
+Rebase --> Feature branch --> git rebase master
+Merge --> Destination (master) branch --> git merge src destination
+
+
+173  git checkout -b b2 master
+  174  git branch
+  175  git checkout master
+  176  git log --oneline
+  177  git log --graph --pretty=oneline
+  178  git branch
+  179  ls -l
+  180  vi file5
+  181  git add .
+  182  git commit -m "5th commit"
+  183  git log --graph --pretty=oneline
+  184  git checkout b2
+  185  vi b2_demo1
+  186  git add .
+  187  git commit -m "b2_1st-commit"
+  188  git log --graph --pretty=oneline
+  189  git rebase
+  190  git rebase master
+  191  git log --graph --pretty=oneline
+  192  git checkout master
+  193  git merge b2 master
+  194  git log --graph --pretty=oneline
+  195  git branch
+  196  vi test
+  197  git add .
+  198  got commit -m "test-file-added-master"
+  199  git commit -m "test-file-added-master"
+  200  git checkout b2
+  201  vi test
+  202  git add .
+  203  git commit -m "test-file-added-b2"
+  204  git rebase master
+
+
+Merge conflict:
+  205  ls -l
+  206  cat test
+  207  git status
+  208  vi test
+  209  git status
+  210  git add test
+  211  git status
+  212  git commit -m "test-file-updated"
+  213  git status
+  214  git log --graph --pretty=oneline
+  215  git branch
+  216  git checkout master
+  217  git branch
+  218  git log --graph --pretty=oneline
+  219  ls -l
+  220  cd test
+  221  cat test
+  222  git merge b2 master
+  223  vi test
+  224  git status
+  225  git add test
+  226  git status
+  227  git commit -m "conflict-resolved"
+  228  git log --graph --pretty=oneline
+  229  git status
+  230  git rebase --continue
+  231  git status
+  232  git checkout b2
+  233  git status
+  234  git checkout master
+  235  git status
+  236  git log --graph --pretty=oneline
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+238  cd project1/
+  239  git log --oneline
+  240  git branch
+  241  git status
+  242  ls -l
+  243  git checkout b1
+  244  git status
+  245  git rebase master
+  246  git checkout b2
+  247  git rebase master
+  248  git log --oneline
+  249  ls -l
+  250  vi demo
+  251  git add .
+  252  git commit -m "demo-file-added-b2"
+  253  git checkout master
+  254  git merge b2 master
+  255  git checkout b1
+  256  vi demo
+  257  git add .
+  258  git commit -m "demo-file-added-b1"
+  259  git checkout master
+  260  git merge b1 master
+  261  git status
+  262  vi demo
+  263  git status
+  264  git add .
+  265  git status
+  266  git commit -m "conflict-resolved-2ndAug"
+  267  git status
+  268  git log --graph --pretty=oneline
+  269  cat demo
+  270  git checkout b1
+  271  git status
+  272  vi demo
+  273  git rebase master
+  274  vi demo
+  275  git checkout b2
+  276  git rebase master
+  277  vi demo
+  278  clear
+  279  git checkout master
+  280  vi ReadMe
+  281  vi app1.log
+  282  vi app2.log
+  283  git status
+  284  ls -l
+  285  vi file6
+  286  git status
+  287  vi .gitignore
+  288  git status
+  289  git add .
+  290  git commit -m "gitIgnore-file-added"
+  291  git status
+  292  vi file7
+  293  git add .
+  294  git commit "file7 added"
+  295  git commit -m "file7 added"
+  296  git status
+  297  git log --oneline
+  298  git show 81fc17a
+  299  git show 96986f4
+  300  clear
+  301  git log --oneline
+  302  git show 81fc17a
+  303  git revert 81fc17a
+  304  git log --oneline
+  305  git show 12aa2e4
+  306  git status
+  307  ls -l
+  308  clear
+  309  git log --oneline
+  310  git revert 12aa2e4
+  311  git log --oneline
+  312  ls -l
+  313  git status
+  314  git log --oneline
+  315  git reset --hard 81fc17a
+  316  git log --oneline
+
+319  rm file7
+  320  ls -l
+  321  git status
+  322  git restore file7
+  323  git status
+  324  ls -l
+  325  git rm file7
+  326  ls -l
+  327  git ls-files
+  328  git status
+  329  git restore --staged file7
+  330  ls -l
+  331  git status
+  332  git restore file7
+  333  git status
+  334  ls -l
+  335  git ls-files
+  336  vi file8
+  337  vi file9
+  338  git add .
+  339  git commit -m "new-enhancement"
+  340  vi file8
+  341  vi file9
+  342  git status
+  343  git stash list
+  344  git stash
+  345  git stash list
+  346  git show stash@{0}
+  347  git status
+  348  git stash pop stash@{0}
+  349  git status
+  350  git stash list
+  351  git stash -p
+  352  git status
+  353  git stash list
+  354  git stash drop stash{
