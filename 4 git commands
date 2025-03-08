@@ -1,0 +1,74 @@
+1  apt update -y
+    2  clear
+    3  ls -l
+    4  pwd
+    5  clear
+    6  ls -la
+    7  mkdir project1
+    8  cd project1/
+    9  ls -la
+   10  git init
+   11  ls -la
+   12  touch file1
+   13  vi file1
+   14  git version
+   15  vi file1
+   16  cat file1
+   17  ls -l
+   18  git ls-files
+   19  git add file1
+   20  ls -l
+   21  git ls-files
+   22  git status
+   23  git commit -m "1st commit"
+   24  clear
+   25  ls -l
+   26  git ls-files
+   27  git status
+   28  history
+   29  cler
+   30  clear
+   31  git log
+   32  history
+
+
+40  touch file2
+   41  vi file2
+   42  cat file2
+   43  ls -l
+   44  git ls-files
+   45  git status
+   46  git add file2
+   47  git ls-files
+   48  git status
+   49  ls -l
+   50  git commit -m "2nd commit"
+   51  ls -l
+   52  git ls-files
+   53  git status
+   54  git log
+   55  git config --list
+   56  git config global --list
+   57  git config --list
+   58  git config --global user.name "raushan"
+   59  git config --list
+   60  git config --global user.email "raushan8586.kumar@gmail.com"
+   61  git config --list
+   62  vi file3
+   63  git add file3
+   64  git commit -m "3rd commit"
+   65  git log
+   67  ls -l
+   76  git config --list
+   77  git config --global user.email "raushan.kumar@gmail.com"
+   78  git config --list
+   79  ls -l
+   80  git status
+   81  git remote -v
+   82  clear
+   83  git remote -v
+   84  git remote add origin https://github.com/raushan8586/aug-2023-repo.git
+   85  git remote -v
+   86  git status
+   87  git push origin master
+   88  history
