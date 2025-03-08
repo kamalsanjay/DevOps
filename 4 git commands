@@ -72,3 +72,130 @@
    86  git status
    87  git push origin master
    88  history
+
+git branch
+   90  git branch b1 master
+   91  git branch
+   92  git log --oneline
+   93  git log
+   94  clear
+   95  git log --oneline
+   96  git checkout b1
+   97  git branch
+   98  git log --oneline
+   99  vi b1_sample1
+  100  git status
+  101  git add .
+  102  git commit -m "b1_1st-commit"
+  103  git log --oneline
+  104  git checkout master
+  105  git log --oneline
+  106  ls -l
+  107  pwd
+  108  git checkout b1
+  109  ls -l
+  110  pwd
+  111  git branch
+  112  git checkout master
+  113  git merge b1 master
+  114  git log --oneline
+  115  git push origin b1
+  116  history
+
+
+Head is the pointer which points to the topmost commit.
+
+
+119  git branch
+  120  pwd
+  121  ls -l
+  122  cd project1/
+  123  ls -l
+  124  ls -la
+  125  git branch
+  126  git log --oneline
+  127  cd ..
+  128  ls -l
+  129  git clone https://github.com/raushan8586/intellipaat-repo2.git
+  130  ls -l
+  131  cd intellipaat-repo2/
+  132  ls - la
+  133  ls -la
+  134  ls -l
+  135  git ls-files
+  136  git status
+  137  cd ..
+  138  cd project1/
+  139  git log --oneline
+  140  ls -l
+  141  vi file4
+  142  ls -l
+  143  git status
+  144  git add .
+  145  git status
+  146  git ls-files
+  147  ls -l
+  148  git restore --staged file4
+  149  git status
+  150  git ls-files
+  151  git add .
+  152  git ls-files
+  153  git status
+  154  git commit -m "4th commit"
+  155  git ls-files
+  156  git log --oneline
+  157  git branch
+  158  git checkout b1
+  159  git branch
+  160  ls -l
+  161  vi b1_sample2
+  162  git add .
+  163  git commit -m "b1_2nd-commit"
+  164  git log --oneline
+  165  git branch
+  166  git log --oneline
+  167  git log --graph --pretty=oneline
+  168  git checkout master
+  169  git log --graph --pretty=oneline
+  170  git merge b1 master
+  171  git log --graph --pretty=oneline
+
+
+Rebase --> arrnaging the log history in the linear fashion
+
+Rebase --> Feature branch --> git rebase master
+Merge --> Destination (master) branch --> git merge src destination
+
+
+173  git checkout -b b2 master
+  174  git branch
+  175  git checkout master
+  176  git log --oneline
+  177  git log --graph --pretty=oneline
+  178  git branch
+  179  ls -l
+  180  vi file5
+  181  git add .
+  182  git commit -m "5th commit"
+  183  git log --graph --pretty=oneline
+  184  git checkout b2
+  185  vi b2_demo1
+  186  git add .
+  187  git commit -m "b2_1st-commit"
+  188  git log --graph --pretty=oneline
+  189  git rebase
+  190  git rebase master
+  191  git log --graph --pretty=oneline
+  192  git checkout master
+  193  git merge b2 master
+  194  git log --graph --pretty=oneline
+  195  git branch
+  196  vi test
+  197  git add .
+  198  got commit -m "test-file-added-master"
+  199  git commit -m "test-file-added-master"
+  200  git checkout b2
+  201  vi test
+  202  git add .
+  203  git commit -m "test-file-added-b2"
+  204  git rebase master
