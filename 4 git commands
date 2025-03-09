@@ -199,3 +199,162 @@ Merge --> Destination (master) branch --> git merge src destination
   202  git add .
   203  git commit -m "test-file-added-b2"
   204  git rebase master
+
+
+Merge conflict:
+  205  ls -l
+  206  cat test
+  207  git status
+  208  vi test
+  209  git status
+  210  git add test
+  211  git status
+  212  git commit -m "test-file-updated"
+  213  git status
+  214  git log --graph --pretty=oneline
+  215  git branch
+  216  git checkout master
+  217  git branch
+  218  git log --graph --pretty=oneline
+  219  ls -l
+  220  cd test
+  221  cat test
+  222  git merge b2 master
+  223  vi test
+  224  git status
+  225  git add test
+  226  git status
+  227  git commit -m "conflict-resolved"
+  228  git log --graph --pretty=oneline
+  229  git status
+  230  git rebase --continue
+  231  git status
+  232  git checkout b2
+  233  git status
+  234  git checkout master
+  235  git status
+  236  git log --graph --pretty=oneline
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+238  cd project1/
+  239  git log --oneline
+  240  git branch
+  241  git status
+  242  ls -l
+  243  git checkout b1
+  244  git status
+  245  git rebase master
+  246  git checkout b2
+  247  git rebase master
+  248  git log --oneline
+  249  ls -l
+  250  vi demo
+  251  git add .
+  252  git commit -m "demo-file-added-b2"
+  253  git checkout master
+  254  git merge b2 master
+  255  git checkout b1
+  256  vi demo
+  257  git add .
+  258  git commit -m "demo-file-added-b1"
+  259  git checkout master
+  260  git merge b1 master
+  261  git status
+  262  vi demo
+  263  git status
+  264  git add .
+  265  git status
+  266  git commit -m "conflict-resolved-2ndAug"
+  267  git status
+  268  git log --graph --pretty=oneline
+  269  cat demo
+  270  git checkout b1
+  271  git status
+  272  vi demo
+  273  git rebase master
+  274  vi demo
+  275  git checkout b2
+  276  git rebase master
+  277  vi demo
+  278  clear
+  279  git checkout master
+  280  vi ReadMe
+  281  vi app1.log
+  282  vi app2.log
+  283  git status
+  284  ls -l
+  285  vi file6
+  286  git status
+  287  vi .gitignore
+  288  git status
+  289  git add .
+  290  git commit -m "gitIgnore-file-added"
+  291  git status
+  292  vi file7
+  293  git add .
+  294  git commit "file7 added"
+  295  git commit -m "file7 added"
+  296  git status
+  297  git log --oneline
+  298  git show 81fc17a
+  299  git show 96986f4
+  300  clear
+  301  git log --oneline
+  302  git show 81fc17a
+  303  git revert 81fc17a
+  304  git log --oneline
+  305  git show 12aa2e4
+  306  git status
+  307  ls -l
+  308  clear
+  309  git log --oneline
+  310  git revert 12aa2e4
+  311  git log --oneline
+  312  ls -l
+  313  git status
+  314  git log --oneline
+  315  git reset --hard 81fc17a
+  316  git log --oneline
+
+319  rm file7
+  320  ls -l
+  321  git status
+  322  git restore file7
+  323  git status
+  324  ls -l
+  325  git rm file7
+  326  ls -l
+  327  git ls-files
+  328  git status
+  329  git restore --staged file7
+  330  ls -l
+  331  git status
+  332  git restore file7
+  333  git status
+  334  ls -l
+  335  git ls-files
+  336  vi file8
+  337  vi file9
+  338  git add .
+  339  git commit -m "new-enhancement"
+  340  vi file8
+  341  vi file9
+  342  git status
+  343  git stash list
+  344  git stash
+  345  git stash list
+  346  git show stash@{0}
+  347  git status
+  348  git stash pop stash@{0}
+  349  git status
+  350  git stash list
+  351  git stash -p
+  352  git status
+  353  git stash list
+  354  git stash drop stash@{0}
+
+
+
+
