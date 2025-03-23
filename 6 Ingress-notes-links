@@ -1,0 +1,28 @@
+dns --> abc1234.com (url)
+
+dns --> load balancer
+
+Microservices 1 --> container1 --> LB1
+Microservices 2 --> container2 --> LB2
+Microservices 3 --> container3 --> LB3
+
+Not re-commended
+
+Ingress --> url/path-based routing
+
+abc1234.com/path1 --> microservices1 service
+abc1234.com/path2 --> microservices2 service
+abc1234.com/path3 --> microservices3 service
+
+Ingress
+1. ingress controller --> deploy this in the cluster to read the ingress resource --> nginx ingress Controller  (others Ingress Controllers --> AWS ALB, Traefik, HA Proxy)
+2. ingress resource --> yaml with the rules
+
+Steps:
+1. Install Nginx Controller
+2. Deploy microservices 1 with Services
+3. Deploy microservices 1 with Services
+4. Deploy Ingress Resourcs
+
+
+https://blog.devgenius.io/k8s-ingress-demo-in-aws-eks-2be7d6d8ea95
