@@ -6,7 +6,7 @@ Microservices 1 --> container1 --> LB1
 Microservices 2 --> container2 --> LB2
 Microservices 3 --> container3 --> LB3
 
-Not re-commended
+Not recommended
 
 Ingress --> url/path-based routing
 
@@ -22,7 +22,9 @@ Steps:
 1. Install Nginx Controller
 2. Deploy microservices 1 with Services
 3. Deploy microservices 1 with Services
-4. Deploy Ingress Resourcs
+4. Deploy Ingress Resources
 
 
-https://blog.devgenius.io/k8s-ingress-demo-in-aws-eks-2be7d6d8ea95
+https://blog.devgenius.io/k8s-ingress-demo-in-aws-eks-2be7d6d8ea95 (if not working)
+https://spacelift.io/blog/kubernetes-ingress (works)
+init has yaml :  https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/cloud/deploy.yaml
