@@ -1,0 +1,82 @@
+Links:
+https://www.jenkins.io/doc/book/installing/linux/
+
+
+If you need to run commands/scripts as root user-->
+
+visudo
+jenkins ALL=(ALL) NOPASSWD: ALL    --> Add this line to sudoers
+ctrl+o and hit enter
+ctrl+x to exit
+
+service jenkins status
+service jenkins stop
+service jenkins start
+
+
+Dockerfile
+https://github.com/raushan8586/pipeline1.git
+
+
+Docker-Job
+sudo docker rm -f $(sudo docker ps -a -q)
+sudo docker build /var/lib/jenkins/workspace/job2 -t httpd1
+sudo docker run -itd -p 82:80 httpd1
+
+
+Slave nodes --> node1
+Manage Jenkins --> Nodes and Clouds --> Add New Node
+--> home directory --> /home/ubuntu
+
+jnlp protocol
+
+Manage Jenkins --> Security --> Agents -- select random
+
+security group
+open ports in Security Group --> ALL TCP
+
+pipeline plugin --> build pipeline 
+
+
+
+Commands:
+1  clear
+    2  apt updte -y
+    3  apt update -y
+    4  apt install openjdk-17-jre -y
+    5  java -version
+    6  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    7  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+    8  apt-get update -y
+    9  apt-get install jenkins -y
+   10  lsof -i -P -n | grep LISTEN
+   11  cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+Add the remote node agent
+
+ubuntu@ip-172-31-39-51:~$ history
+    1  pwd
+    2  curl -sO http://13.232.29.83:8080/jnlpJars/agent.jar
+    3  ls -l
+    4  sudo su -
+    5  pwd
+    6  ls -l
+    7  java -jar agent.jar -jnlpUrl http://13.232.29.83:8080/computer/node1/jenkins-agent.jnlp -secret 96dec1bb2a122f2fde4e54ac11803d77b0898c4c854472f5f8f6c871999fa44c -workDir "/home/ubuntu"
+    8  history
+
+
+Jenkinsfile
+
+https://www.jenkins.io/doc/book/pipeline/
+https://www.jenkins.io/doc/book/pipeline/syntax/
+https://www.jenkins.io/doc/book/pipeline/docker/
+
+https://github.com/raushan8586/MyLab
+
+More Jenkinsfile
+-----------------
+https://github.com/eldada/jenkins-pipeline-kubernetes
+https://github.com/hakdogan/jenkins-pipeline/blob/master/Jenkinsfile
+https://gist.github.com/gazoakley/87dcc16d28fd05acda4ba0a4be5ac387
+https://github.com/jenkins-docs/simple-java-maven-app/blob/master/jenkins/Jenkinsfile
